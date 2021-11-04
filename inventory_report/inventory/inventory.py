@@ -5,6 +5,8 @@ import csv
 import json
 
 
+# Primeira função inspirada no seguinte PR:
+# https://github.com/tryber/sd-09-inventory-report/pull/10/files
 def convert_xml_file_to_list(xml_file):
     converted_file = ET.parse(xml_file)
     root = converted_file.getroot()
