@@ -3,8 +3,8 @@ from inventory_report.reports.complete_report import CompleteReport
 import xml.etree.ElementTree as ET
 import csv
 import json
-# Primeira função inspirada no seguinte PR:
-# https://github.com/tryber/sd-09-inventory-report/pull/10/files
+
+
 def convert_xml_file_to_list(xml_file):
     converted_file = ET.parse(xml_file)
     root = converted_file.getroot()
@@ -15,6 +15,8 @@ def convert_xml_file_to_list(xml_file):
             new_content[each_element.tag] = each_element.text
         file_content.append(new_content)
     return file_content
+  
+
 class Inventory():
     @classmethod
     def import_data(cls, path, type):
